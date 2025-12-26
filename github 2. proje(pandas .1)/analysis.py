@@ -20,8 +20,8 @@ high_rated = df[df["rating"]>=8.0]
 print(high_rated)
 
 print("\n---Türlere göre ortalama puan---")
-gendre_avg = df.groupby("gendre")["rating"].mean()
-print(gendre_avg)
+genre_avg = df.groupby("genre")["rating"].mean()
+print(genrre_avg)
 
 print("\n---en yüksek puanlı film---")
 best = df.loc[df["rating"].idxmax(),["title","rating"]]
@@ -29,4 +29,5 @@ print(best)
 
 print("\n---yıllara göre ortalama puan---")
 year_avg=df.groupby("year")["rating"].mean()
+
 print(year_avg)
